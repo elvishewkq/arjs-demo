@@ -38,20 +38,31 @@
       renderer="logarithmicDepthBuffer: true;"
       embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
 
+      <a-assets>
+        <video id="vid1" autoplay loop="true" src="videos/dentalcare.mp4"></video>
+      </a-assets>
+
       <!-- use rawgithack to retrieve the correct url for nft marker (see 'pinball' below) -->
       <a-nft
-          type='nft' url='arjs-demo/markers/butterfly'
+          type='nft' url='arjs-demo/markers/cartoontooth_bw'
           smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
-          <a-entity
+          <!-- <a-entity
               gltf-model='3D_images/butterfly/scene.gltf'
               scale="5 5 5"
               animation-mixer
               >
-          </a-entity>
+          </a-entity> -->
+          
+          <a-video src="#vid1" width="16" height="9" position="0 0 -20"></a-video>
       </a-nft>
 
     <a-entity camera></a-entity>
   </a-scene>
+
+  <!-- <audio autoplay loop>
+    <source src="sound.mp3" type="audio/mpeg">
+    <source src="sound.wav" type="audio/wav">
+  </audio> -->
 </body>
 
 <!-- <script>
