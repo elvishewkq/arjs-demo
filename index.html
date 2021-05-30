@@ -8,7 +8,7 @@
 <script src="aframe-ar-nft.js"></script>
 <script src="aframe-gui.min.js"></script>
 
-<!-- <style>
+<style>
   .arjs-loader {
     height: 100%;
     width: 100%;
@@ -54,20 +54,19 @@
       }
     });
   };
-</script> -->
+</script>
 
 <body style='margin : 0px; overflow: hidden;'>
   <!-- minimal loader shown until image descriptors are loaded -->
-  <!-- <div class="arjs-loader">
+  <div class="arjs-loader">
     <div>Loading, please wait...</div>
-  </div> -->
+  </div>
 
-  <!-- <a-scene
+  <a-scene
       vr-mode-ui="enabled: false;"
       renderer="antialias: true; alpha: true; precision: mediump; logarithmicDepthBuffer: true;"
-      embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"> -->
+      embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;">
 
-  <a-scene>
       <a-camera>
         <a-gui-cursor design="cross" fuse="false" fuse-timeout="3000" raycast="objects:[gui-interactable]"></a-gui-cursor>
       </a-camera>
@@ -121,7 +120,7 @@
       </a-assets>
 
       <!-- For video -->
-      <!-- <a-nft
+      <a-nft
           videohandler
           type="nft" url="arjs-demo/markers/cartoontooth_bw"
           smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5">
@@ -129,40 +128,7 @@
           <a-video src="#vid1" width="300" height="175" position="50 150 -100" rotation="-90 0 0"></a-video>
       </a-nft>
 
-    <a-entity camera></a-entity> -->
+    <a-entity camera></a-entity>
   </a-scene>
 
 </body>
-
-<!-- <script>
-  var sceneEl = document.querySelector('a-scene');
-  var entity = sceneEl.querySelector('a-entity');
-
-  var firstVertical = true;
-
-  if(screen.orientation.angle != 0){
-    firstVertical = false;
-  }
-
-  start();
-
-  function start() {
-    // For first setup 
-    entity.setAttribute('position', { x: screen.width / 2, y: 0, z: -(screen.height / 2) });
-  }
-
-  screen.orientation.addEventListener("change", function(e) {
-
-    //First Vertical
-    if(screen.orientation.angle != 0 && firstVertical){
-
-      entity.setAttribute('position', { x: 0, y: 0, z: -(screen.height / 2) });
-    }
-    //First Horizontal
-    if(screen.orientation.angle == 0 && !firstVertical){
-
-      entity.setAttribute('position', { x: 1.33 * screen.width, y: 0, z: -(screen.height / 2) });
-    }
-  }, false);
-  
-</script> -->
