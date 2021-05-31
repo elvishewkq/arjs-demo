@@ -29,6 +29,14 @@
         font-size: 1.25em;
         color: white;
       }
+
+      .container {
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+     
     </style>
 
     <script>
@@ -84,6 +92,7 @@
       <div>Loading, please wait...</div>
     </div>
 
+    <div class="container">
     <a-scene
         vr-mode-ui="enabled: false;"
         renderer="antialias: true; alpha: true; precision: mediump; logarithmicDepthBuffer: true;"
@@ -104,11 +113,10 @@
             smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5">
             
             <!-- <a-video src="#vid1" width="300" height="175" position="50 150 -100" rotation="-90 0 0"></a-video> -->
-
             <a-image id="web-button" class="clickable" src="#icon-web" position="50 150 -100" height="0.1" width="0.1"
                 animation="property: scale; to: 0.5 0.5 0.5; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
             </a-image>
- 
+
         </a-nft>
 
         <!-- <a-gui-flex-container 
@@ -137,6 +145,6 @@
             </a-entity>
         </a-nft> -->
     </a-scene>
-
+    </div>
   </body>
 </html>
