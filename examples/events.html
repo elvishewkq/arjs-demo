@@ -1,0 +1,29 @@
+<!doctype HTML>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    
+      <!-- <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script> -->
+      <!-- <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script> -->
+      <!-- <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> -->
+      <script src="../js/aframe.min.js"></script>
+      <script src="../js/mover.js"></script>
+      <script src="../js/return-emitter.js"></script>
+
+    </head>
+
+    <body style='margin : 0px; overflow: hidden;'>
+      <a-scene cursor="rayOrigin: mouse">
+        <a-image src="../assets/icons/email.png"></a-image>
+        <a-box position="-1.5 1 -1.5" color="#4CC3D9" animation="property: rotation; to: 0 360 0; easing: linear; dur: 5000; loop: true" mover></a-box>
+        <a-cylinder position="0 1 2" scale="0.2 0.2 0.2" color="#4FF3D9" return-emitter></a-cylinder>
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="8" height="8" color="#7BC8A4" return-emitter></a-plane>
+
+        <a-entity id="rig">
+          <a-entity camera position="0 2 0" look-controls wasd-controls>
+            <!-- <a-cursor id="cursor" raycaster fuse="true" fusetimeout="3000"></a-cursor> -->
+          </a-entity>
+        </a-entity>
+      </a-scene>
+    </body>
+</html>
