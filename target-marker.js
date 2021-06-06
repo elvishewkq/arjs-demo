@@ -12,9 +12,9 @@ AFRAME.registerComponent('target-marker', {
         });
         newMark.setAttribute('material', 'color: red');
         newMark.setAttribute('scale', '.2 .2 .2');
-        newMark.setAttribute('position', p);
+        newMark.setAttribute('position', el.object3D.worldToLocal(p));
         newMark.setAttribute('target-marker', {});
-        scene.appendChild(newMark);
+        el.appendChild(newMark);
         }
 
         this.el.addEventListener('click', this.addMarker);
