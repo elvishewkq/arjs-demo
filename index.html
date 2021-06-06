@@ -10,54 +10,7 @@
     <script src="js/aframe-ar-nft.js"></script>
     <script src="js/aframe-gui.min.js"></script>
 
-    <style>
-      .arjs-loader {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.8);
-        z-index: 9999;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .arjs-loader div {
-        text-align: center;
-        font-size: 1.25em;
-        color: white;
-      }
-     
-    </style>
-
-    <script>
-      window.onload = function() {
-        AFRAME.registerComponent("videohandler", {
-          init: function() {
-            var marker = this.el;
-
-            this.vid = document.querySelector("#vid1");
-
-            marker.addEventListener(
-              "markerFound",
-              function() {
-                this.vid.play();
-              }.bind(this)
-            );
-
-            marker.addEventListener(
-              "markerLost",
-              function() {
-                this.vid.pause();
-                this.vid.currentTime = 0;
-              }.bind(this)
-            );
-          }
-        });
-      };
-    </script>
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body style='margin : 0px; overflow: hidden;'>
